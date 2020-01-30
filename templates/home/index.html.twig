@@ -6,5 +6,18 @@
 {% block body %}
     <div class="container">
         <h1 class="my-5">On s'amuse avec Twig !</h1>
+
+        <p>
+            Hello tous, je m'appelle
+            {#badge avec les options pas défaut#}
+            {{ prenom | badge }}
+            {#badge avec une option de couleur et un arrondi#}
+            {{ nom | badge({'color': 'danger', 'rounded': true}) }}
+            et j'ai un magnifique filtre
+        </p>
+
+        <p>
+            La personne est adulte : {{ adulte | booleanBadge }}
+        </p>
     </div>
 {% endblock %}
